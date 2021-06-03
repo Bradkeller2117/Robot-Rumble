@@ -1,13 +1,25 @@
+//Game States
+//"Win"- Player robot has defeated all enemy-robots
+//  * Fight all enemy-robots
+//  * Defeat all enemy-robots
+//"Lose"- Player robot's health is zero or less
 var playerName = window.prompt("What is your Robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-var enemyName = "Roberto";
+var enemyNames = ["Roberto", "Amy Android", "Robo Trumble"]
+//console.log(enemyNames[0]);
+//console.log(enemyNames[1]);
+//console.log(enemyNames[2]);
+//console.log(enemyNames.length);
+
+
+
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function() {
+var fight = function(enemyName) {
    
     window.alert("Welcome to Robot Gladiators!");
    
@@ -64,6 +76,10 @@ var fight = function() {
         else {
             window.alert("You need to pick a valid option. try again!");
         }
-    };       
-        fight();
+        
+    };
+    for (var i = 0; i < enemyNames.length; i++) {
+      fight(enemyNames[i]);
+    }       
+   
     
